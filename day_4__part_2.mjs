@@ -3,10 +3,12 @@ import { readFile } from "./util.mjs";
 const input = readFile("./day_4.txt");
 
 /**
- * Where `a` and `b` are a two-element tuple. To check if `a` is a range
- * subset of `b`, you're checking their extents.
+ * Where `a` and `b` are a two-element tuple. For overlap, you're checking if
+ *
+ *      b_0 <= a <= b_1
+ *
  */
-const contained = (a, b) => (a[0] >= b[0] && a[1] <= b[1] ? true : false);
+const contained = (a, b) => (a[1] >= b[0] && a[1] <= b[1] ? true : false);
 
 console.log(
   input
