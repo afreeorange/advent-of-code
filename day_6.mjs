@@ -1,4 +1,3 @@
-import { sign } from "crypto";
 import { readFile } from "./util.mjs";
 
 const SAMPLE_SIGNALS_AND_CORRECT_START_OF_PACKET_MARKERS = [
